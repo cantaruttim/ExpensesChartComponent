@@ -6,10 +6,47 @@ body {
     font-size: 18px;
     font-weight: 400, 700;
     background-color: hsl(27, 66%, 92%);
+    width: 1440px;
 }
 
 .my_balance {
     background-color: hsl(10, 79%, 65%);
     margin: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 450px;
+    height: 100px;
+    align-items: center;
+    padding: auto;
+}
+
+.results {
+    background-color: white;
+    margin: auto;
+    border-radius: 10px;
+    width: 450px;
+    height: 500px;
+
+}
+
+p {
+    color: rgba(71, 69, 69, 0.479);
+    text-align: left;
+    align-items: baseline;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+header>p {
+    color: white;
+}
+
+h1 {
+    text-align: left;
+    padding: 20px;
+    font-family: DM Sans;
+}
+
+.last_month {
+    text-align: right;
+    padding-left: 50%;
 }

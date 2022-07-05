@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+    <script type="text/script" src="script.js"></script>
     <title>Expensive Chart Component</title>
 </head>
 
@@ -24,7 +25,7 @@
 
             <section>
                 <!-- SHOW RESULTS IN HERE -->
-                <div id="tester"></div>
+                <div id="tester" style="width: 300px;height:250px;"></div>
             </section>
 
             <p class="week_days">
@@ -44,6 +45,32 @@
             </div>
 
     </section>
+
+    <script>
+
+        var trace1 = {
+            type: 'bar',
+            x: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+            y: [17.45, 34.91, 52.36, 31.07, 23.39, 43.39, 43.28, 25.48],
+            marker: {
+                color: '#C8A2C8',
+                line: {
+                    width: 1.0
+                }
+            }
+        };
+
+        var data = [trace1];
+
+        var layout = {
+            font: { size: 15 }
+        };
+
+        var config = { responsive: true }
+
+        Plotly.newPlot('tester', data, layout, config);
+
+    </script>
 
 </body>
 

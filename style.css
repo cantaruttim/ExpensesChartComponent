@@ -14,7 +14,7 @@ body {
     margin: auto;
     border-radius: 10px;
     width: 450px;
-    height: 100px;
+    height: 80px;
     align-items: center;
     padding: auto;
 }
@@ -50,3 +50,10 @@ h1 {
     text-align: right;
     padding-left: 50%;
 }
+
+.tester {
+    width: 350px;
+    height: 100px;
+}
+
+style="width: 400px;height:300px;"

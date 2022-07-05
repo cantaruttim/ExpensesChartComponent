@@ -27,7 +27,7 @@
                 <!-- SHOW RESULTS IN HERE -->
                 <div id="tester" style="width: 300px;height:250px;"></div>
             </section>
-
+            <!--
             <p class="week_days">
             <p id="mon"> Mon </p>
             <p id="tue"> Tue </p>
@@ -37,7 +37,7 @@
             <p id="sat"> Sat </p>
             <p id="sun"> Sun </p>
             </p>
-
+-->
             <div class="total" id="total">
                 <p id="month">Total this month</p>
                 <p id="last_month">From Last month</p>
@@ -48,7 +48,7 @@
 
     <script>
 
-        var trace1 = {
+        var myData = {
             type: 'bar',
             x: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
             y: [17.45, 34.91, 52.36, 31.07, 23.39, 43.39, 43.28, 25.48],
@@ -60,7 +60,7 @@
             }
         };
 
-        var data = [trace1];
+        var data = [myData];
 
         var layout = {
             font: { size: 15 }

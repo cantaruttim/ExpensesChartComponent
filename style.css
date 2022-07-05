@@ -10,7 +10,7 @@ body {
 }
 
 .my_balance {
-    background-color: hsl(10, 79%, 65%);
+    background-color: #ec775f;
     margin: auto;
     border-radius: 10px;
     width: 390px;
@@ -54,4 +54,14 @@ h1 {
 .last_month {
     text-align: right;
     padding-left: 50%;
+}
+
+.tester {
+    margin: auto;
+    align-items: center;
+}
+
+.chart {
+    margin: auto;
+    align-items: center;
 }

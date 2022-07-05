@@ -23,7 +23,7 @@
 
             <section id="header_card">
                 <!-- SHOW RESULTS IN HERE -->
-                <div id="tester" style="width: 390px;height:260px;"></div>
+                <div id="tester" style="width: 390px;height:255px;"></div>
             </section>
             <div class="total" id="total">
                 <p id="month">Total this month</p>
@@ -55,7 +55,7 @@
 
         var config = { responsive: true }
 
-        Plotly.newPlot('tester', data, layout, config);
+        Plotly.newPlot('tester', data, layout, { scrollZoom: true }, { modeBarButtonsToRemove: ['toImage'] }, { responsive: true }, config);
 
     </script>
 

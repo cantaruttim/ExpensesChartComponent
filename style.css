@@ -58,7 +58,13 @@ h1 {
 .last_month {
     text-align: right;
     padding-left: 50%;
+    align-items: right;
 
+}
+
+.percent {
+    text-align: right;
+    margin-right: 0px;
 }
 
 .tester {
@@ -72,4 +78,15 @@ body>section {
 
 .chart {
     margin-top: 5%;
+}
+
+.total {
+    width: 500px;
+    height: 147px;
+    display: inline-block;
+}
+
+.price {
+    font-size: 30px;
+    color: black;
 }

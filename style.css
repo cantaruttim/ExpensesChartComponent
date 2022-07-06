@@ -73,3 +73,17 @@ body>section {
     padding: 15px;
 
 }
+
+#money>p {
+    margin-right: 80px;
+    margin-left: 5px;
+}
+
+#percent>p {
+    margin-left: 80px;
+    margin-right: 5px;
+}
+
+.value {
+    color: black;
+}

@@ -49,8 +49,7 @@
             data = [{
                 x: x, y: y, type: 'bar',
                 mode: 'markers', marker: { size: 16, color: colors }
-            }],
-            layout = {
+            }]; layout = {
                 hovermode: 'closest',
             };
 
@@ -62,7 +61,7 @@
 
         var config = { responsive: true }
 
-        Plotly.newPlot('tester', data, layout, { scrollZoom: true }, { responsive: true }, config);
+        Plotly.newPlot('tester', data, layout, config);
 
         myData.on('plotly_click', function (data) {
             var pn = '',
@@ -77,6 +76,10 @@
 
             var update = { 'marker': { color: colors, size: 16 } };
             Plotly.restyle('tester', update, [tn]);
+        });
+
+        myPlot.on('plotly_restyle', function (data) {
+            console.log(data);
         });
 
     </script>

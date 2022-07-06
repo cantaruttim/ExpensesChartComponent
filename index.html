@@ -42,17 +42,17 @@
 
     <script>
 
-        var myData = {
-            type: 'bar',
-            x: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-            y: [17.45, 34.91, 52.36, 31.07, 23.39, 43.39, 43.28, 25.48],
-            marker: {
-                color: '#ec775f',
-                line: {
-                    width: 1.0
-                }
-            }
-        };
+        var myData = document.querySelector('#tester'),
+            x = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+            y = [17.45, 34.91, 52.36, 31.07, 23.39, 43.39, 43.28, 25.48],
+            colors = ['#ec775f', '#76B5BC'],
+            data = [{
+                x: x, y: y, type: 'bar',
+                mode: 'markers', marker: { size: 16, color: colors }
+            }],
+            layout = {
+                hovermode: 'closest',
+            };
 
         var data = [myData];
 
@@ -62,7 +62,22 @@
 
         var config = { responsive: true }
 
-        Plotly.newPlot('tester', data, layout, { scrollZoom: true }, { modeBarButtonsToRemove: ['toImage'] }, { responsive: true }, config);
+        Plotly.newPlot('tester', data, layout, { scrollZoom: true }, { responsive: true }, config);
+
+        myData.on('plotly_click', function (data) {
+            var pn = '',
+                tn = '',
+                colors = [];
+            for (var i = 0; i < data.points.length; i++) {
+                pn = data.points[i].pointNumber;
+                tn = data.points[i].curveNumber;
+                colors = data.points[i].data.marker.color;
+            };
+            colors[pn] = '#76B5BC';
+
+            var update = { 'marker': { color: colors, size: 16 } };
+            Plotly.restyle('tester', update, [tn]);
+        });
 
     </script>
 

@@ -15,7 +15,7 @@ body {
     background-color: #ec775f;
     margin: auto;
     border-radius: 10px;
-    width: 390px;
+    width: 450px;
     height: 100px;
     align-items: center;
     padding: auto;
@@ -25,7 +25,7 @@ body {
     background-color: white;
     margin: auto;
     border-radius: 10px;
-    width: 390px;
+    width: 450px;
     height: 500px;
 
 }
@@ -58,6 +58,7 @@ h1 {
 .last_month {
     text-align: right;
     padding-left: 50%;
+
 }
 
 .tester {
@@ -67,4 +68,8 @@ h1 {
 
 body>section {
     align-items: center;
+}
+
+.chart {
+    margin-top: 5%;
 }

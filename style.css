@@ -49,8 +49,9 @@ header>p {
 
 h1 {
     text-align: left;
-    padding: 18px;
+    padding: 10px;
     font-family: DM Sans;
+    margin: 0px;
 }
 
 .last_month {

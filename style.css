@@ -70,20 +70,33 @@ body>section {
 
 #total {
     display: inline-flex;
-    padding: 15px;
+    padding: 5px;
 
 }
 
 #money>p {
     margin-right: 80px;
     margin-left: 5px;
+    margin-bottom: 0px;
 }
 
 #percent>p {
-    margin-left: 80px;
+    margin-left: 60px;
     margin-right: 5px;
+    margin-bottom: 0px;
+    padding: 0px;
+    height: 0px;
+    width: auto;
 }
 
-.value {
+.value_dolar {
     color: black;
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+.value_percent {
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
 }

@@ -55,18 +55,6 @@ h1 {
     margin: 0px;
 }
 
-.last_month {
-    text-align: right;
-    padding-left: 50%;
-    align-items: right;
-
-}
-
-.percent {
-    text-align: right;
-    margin-right: 0px;
-}
-
 .tester {
     margin: auto;
     align-items: center;
@@ -80,13 +68,8 @@ body>section {
     margin-top: 5%;
 }
 
-.total {
-    width: 500px;
-    height: 147px;
-    display: inline-block;
-}
+#total {
+    display: inline-flex;
+    padding: 15px;
 
-.price {
-    font-size: 30px;
-    color: black;
 }

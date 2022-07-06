@@ -18,7 +18,15 @@ body {
     width: 500px;
     height: 90px;
     align-items: center;
-    padding: auto;
+}
+
+#balance {
+    font-size: 45px;
+}
+
+#balance::hover {
+    display: none;
+    visibility: hidden;
 }
 
 .results {

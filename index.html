@@ -42,28 +42,24 @@
 
     <script>
 
-        var myData = document.querySelector('#tester'),
+        var myPlot = document.getElementById('tester'),
             x = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-            y = [17.45, 34.91, 52.36, 31.07, 23.39, 43.39, 43.28, 25.48],
-            colors = ['#ec775f', '#ec775f', '#ec775f', '#ec775f', '#ec775f', '#ec775f', '#ec775f'],
-
-
+            y = [17.45, 34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+            colors = ['#ec775f', '#ec775f', '#ec775f',
+                '#ec775f', '#ec775f', '#ec775f',
+                '#ec775f'],
             data = [{
-                x: x, y: y, type: 'bar',
+                x: x, y: y,
+                type: 'bar',
                 mode: 'markers', marker: { size: 16, color: colors }
-            }]; layout = {
+            }],
+            layout = {
                 hovermode: 'closest',
             };
 
-        var layout = {
-            font: { size: 15 }
-        };
+        Plotly.newPlot('tester', data, layout);
 
-        var config = { responsive: true }
-
-        Plotly.newPlot('tester', data, layout, config);
-
-        myData.on('plotly_click', function (data) {
+        myPlot.on('plotly_hover', function (data) {
             var pn = '',
                 tn = '',
                 colors = [];
@@ -72,14 +68,25 @@
                 tn = data.points[i].curveNumber;
                 colors = data.points[i].data.marker.color;
             };
-            colors[pn] = '#76B5BC';
+            colors[pn] = '#C54C82';
 
             var update = { 'marker': { color: colors, size: 16 } };
             Plotly.restyle('tester', update, [tn]);
         });
 
-        myPlot.on('plotly_restyle', function (data) {
-            console.log(data);
+        myPlot.on('plotly_unhover', function (data) {
+            var pn = '',
+                tn = '',
+                colors = [];
+            for (var i = 0; i < data.points.length; i++) {
+                pn = data.points[i].pointNumber;
+                tn = data.points[i].curveNumber;
+                colors = data.points[i].data.marker.color;
+            };
+            colors[pn] = '#00000';
+
+            var update = { 'marker': { color: colors, size: 16 } };
+            Plotly.restyle('tester', update, [tn]);
         });
 
     </script>

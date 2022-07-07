@@ -14,6 +14,7 @@ body {
 .my_balance {
     background-color: #ec775f;
     margin: auto;
+    margin-bottom: 20px;
     border-radius: 10px;
     width: 500px;
     height: 90px;
@@ -22,11 +23,24 @@ body {
 
 #balance {
     font-size: 45px;
+    margin: 5px 25px 2px;
 }
 
-#balance::hover {
-    display: none;
-    visibility: hidden;
+#name {
+    margin: 5px 25px 1px;
+
+}
+
+#circle {
+    width: 50px;
+    height: 50px;
+    background: hsl(25, 47%, 15%);
+    border-radius: 50%;
+    display: inline-flex;
+    margin-top: -30px;
+    margin-right: 25px;
+    margin-bottom: 5px;
+    margin-left: 180px;
 }
 
 .results {
@@ -34,7 +48,7 @@ body {
     margin: auto;
     border-radius: 10px;
     width: 500px;
-    height: 500px;
+    height: 480px;
 
 }
 
@@ -60,7 +74,7 @@ h1 {
     text-align: left;
     padding: 10px;
     font-family: DM Sans;
-    margin: 0px;
+    margin: 0px 25px;
 }
 
 .tester {
@@ -84,13 +98,13 @@ body>section {
 
 #money>p {
     margin-right: 80px;
-    margin-left: 5px;
+    margin-left: 25px;
     margin-bottom: 0px;
 }
 
 #percent>p {
     margin-left: 60px;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-bottom: 0px;
     padding: 0px;
     height: 0px;
